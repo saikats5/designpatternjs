@@ -11,6 +11,13 @@ var Task = function(name){
     }
 }
 
+//Drawback // complete function will have multiple copies
+
+Task.prototype.complete = function(){
+        console.log('completed task: ',this.name);
+        this.completed = true;
+    }
+
 var task1 = new Task('Creating Task1');
 var task2 = new Task('Creating Task2');
 var task3 = new Task('Creating Task3');
