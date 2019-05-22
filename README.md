@@ -14,4 +14,16 @@ Object.defineProperty(task, 'toString', {
     configurable: true // ability to redefine the whole of property
 })
 
-var urgentTask = Object.create(task);
+var urgentTask = Object.create(task, {
+    name: { value: 'Saikat' },
+    greet: {
+        value: function(){
+            return 'Hello';
+        }
+    }
+});
+
+//equivalent
+//var foo = {}
+//var bar = Object.create(Object.prototype);
+
